@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F5F2EE;
+  --foreground: #141210;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+
+  /* Warm neutral palette */
+  --color-surface: #ffffff;
+  --color-near-black: #141210;
+  --color-muted: #A09B95;
+  --color-muted-light: #C0BAB3;
+  --color-border: #E8E4DF;
+  --color-border-strong: #DDD8D2;
+  --color-avatar-bg: #EDE9E4;
+  --color-positive: #2A6041;
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: #F5F2EE;
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile shell — desktop preview frame */
+#mobile-shell {
+  position: relative;
+  width: 390px;
+  height: 844px;
+  overflow: hidden;
+  background: #F5F2EE;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.12);
+  border-radius: 40px;
+}
+
+/* On an actual phone, fill the viewport and drop the decorative frame */
+@media (max-width: 430px) {
+  html, body {
+    align-items: stretch;
+  }
+
+  #mobile-shell {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

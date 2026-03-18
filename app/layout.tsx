@@ -12,8 +12,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "XUY Wallet",
-  description: "Digital Uruguayan Peso Wallet",
+  title: "Agent",
+  description: "AI agent orchestration interface",
 };
 
 export const viewport = {
